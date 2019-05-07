@@ -106,7 +106,7 @@ class ReactTags extends Component {
     const { suggestions, classNames } = props;
     this.state = {
       suggestions,
-      query: props.inputValue || '',
+      query: props.inputValue,
       isFocused: false,
       shouldFocus: false,
       selectedIndex: -1,
@@ -160,12 +160,12 @@ class ReactTags extends Component {
   }
 
   focusInput() {
-    this.setState({shouldFocus: true})
+    this.setState({shouldFocus: true});
   }
 
   resetAndFocusInput() {
     this.setState({
-      query: ''
+      query: '',
     });
     this.focusInput();
   }
@@ -218,7 +218,7 @@ class ReactTags extends Component {
     }
     this.setState({
       shouldFocus: true,
-      isFocused: true
+      isFocused: true,
     });
   }
 
@@ -229,7 +229,7 @@ class ReactTags extends Component {
     }
     this.setState({
       shouldFocus: false,
-      isFocused: false
+      isFocused: false,
     });
   }
 
@@ -426,7 +426,7 @@ class ReactTags extends Component {
       maxLength,
       inline,
       inputFieldPosition,
-      inputComponent
+      inputComponent,
     } = this.props;
 
     const position = !inline ? INPUT_FIELD_POSITIONS.BOTTOM : inputFieldPosition;

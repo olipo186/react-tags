@@ -27,11 +27,11 @@ class InputComponent extends React.Component {
       />
     );
   }
-};
+}
 
 InputComponent.propTypes = {
   inputComponent: PropTypes.func,
-  focus: PropTypes.bool
+  focus: PropTypes.bool,
 };
 
 export default InputComponent;
